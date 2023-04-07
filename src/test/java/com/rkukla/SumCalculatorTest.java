@@ -2,6 +2,7 @@ package com.rkukla;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class SumCalculatorTest {
@@ -13,6 +14,7 @@ class SumCalculatorTest {
     }
 
     @Test
+    @DisplayName("Check sumCalculator.sum(1)")
     public void testThatSumCalculatorWorksOkWith1(){
         int actual = sumCalculator.sum(1);
         int expected = 1;
@@ -20,6 +22,7 @@ class SumCalculatorTest {
     }
 
     @Test
+    @DisplayName("Check sumCalculator.sum(3)")
     public void testThatSumCalculatorWorksOkWith3(){
         int actual = sumCalculator.sum(3);
         int expected = 6;
@@ -27,6 +30,7 @@ class SumCalculatorTest {
     }
 
     @Test
+    @DisplayName("Check sumCalculator.sum(0)")
     public void testThatSumCalculatorWorksOkWith0(){
         Assertions.assertThrows(IllegalArgumentException.class, () -> sumCalculator.sum(0));
     }
